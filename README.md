@@ -87,7 +87,7 @@ The import of data is done from an already existing MySQL file. This file has to
      
  ### Analysis of different SQL statement on data base
      
-   1.To find of all customers records 
+   #### 1.To find of all customers records 
      
      `SELECT * FROM sales.customers;`
       
