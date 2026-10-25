@@ -91,67 +91,67 @@ The import of data is done from an already existing MySQL file. This file has to
      
      `SELECT * FROM sales.customers;`
       
-   2.To find total number of customers 
+  ####  2.To find total number of customers 
      
      `SELECT count(*) From sales.customers;`
 
-   3.To find transactions for Chennai market (market code for chennai is Mark001
+  ####  3.To find transactions for Chennai market (market code for chennai is Mark001
      
       `SELECT * FROM sales.transactions where market_code='Mark001';`
 
-   4.To find distrinct product codes that were sold in chennai
+  ####  4.To find distrinct product codes that were sold in chennai
      
       `SELECT distinct product_code FROM sales.transactions where market_code='Mark001';`
 
-   5.To find transactions for Chennai market (market code for chennai is Mark002
+  ####  5.To find transactions for Chennai market (market code for chennai is Mark002
      
       `SELECT * FROM sales.transactions where market_code='Mark002';`
 
-   6.To find distrinct product codes that were sold in mumbai
+  ####  6.To find distrinct product codes that were sold in mumbai
      
       `SELECT distinct product_code FROM sales.transactions where market_code='Mark002';`
       
-   7.To find transactions where currency is US dollars
+  ####  7.To find transactions where currency is US dollars
      
       `SELECT * from sales.transactions where currency="USD";` 
       
-   8.To find transactions in 2020 join by date table
+  ####  8.To find transactions in 2020 join by date table
      
       `SELECT sales.transactions.*, sales.date.* FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020;`  
 
-   8.To find transactions in 2019 join by date table
+  ####  9.To find transactions in 2019 join by date table
      
       `SELECT sales.transactions.*, sales.date.* FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2019;`  
 
-   9.To find total revenue in year 2020,
+ ####  10.To find total revenue in year 2020,
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.transactions.currency="INR\r" or sales.transactions.currency="USD\r";` 
       
-   10.To find total revenue in year 2019,
+ ####  11.To find total revenue in year 2019,
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2019 and sales.transactions.currency="INR\r" or sales.transactions.currency="USD\r";`       
 
-   11.To find total revenue in year 2020, January Month,
+####   12.To find total revenue in year 2020, January Month,
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.date.month_name="January" and (sales.transactions.currency="INR\r" or sales.transactions.currency="USD\r");` 
 
-   12.To find total revenue in year 2020, February Month,
+####   13.To find total revenue in year 2020, February Month,
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.date.month_name="February" and (sales.transactions.currency="INR\r" or sales.transactions.currency="USD\r");` 
 
-   13.To find total revenue in year 2019, January Month,
+####   14.To find total revenue in year 2019, January Month,
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.date.month_name="January" and (sales.transactions.currency="INR\r" or sales.transactions.currency="USD\r");` 
 
-   14.To find total revenue in year 2019, February Month,
+####  15.To find total revenue in year 2019, February Month,
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.date.month_name="February" and (sales.transactions.currency="INR\r" or sales.transactions.currency="USD\r");` 
 
-   15.To find total revenue in year 2020 in Chennai
+####  16.To find total revenue in year 2020 in Chennai
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.transactions.market_code="Mark001";` 
 
-   16.To find total revenue in year 2020 in Mumbai
+####  17.To find total revenue in year 2020 in Mumbai
      
       `SELECT SUM(sales.transactions.sales_amount) FROM sales.transactions INNER JOIN sales.date ON sales.transactions.order_date=sales.date.date where sales.date.year=2020 and sales.transactions.market_code="Mark002";` 
 
