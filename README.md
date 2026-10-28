@@ -1,3 +1,4 @@
+<img width="1165" height="695" alt="Screenshot 2026-10-27 123633" src="https://github.com/user-attachments/assets/d6c796e4-fee0-454b-b890-a4f4d8f3c8e3" />
 #  Project : Sales Insights of Data Analysis-AtliQ Hardware
 
 
